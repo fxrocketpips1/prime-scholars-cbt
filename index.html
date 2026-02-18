@@ -60,7 +60,7 @@ let password = document.getElementById("password").value;
 
 signInWithEmailAndPassword(auth,email,password)
 
-.then(() => alert("Login successful"))
+.then(() => window.location.href="dashboard.html")
 
 .catch(e => alert(e.message))
 
