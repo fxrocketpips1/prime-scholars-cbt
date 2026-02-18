@@ -192,10 +192,6 @@ opacity:0.7;
 
 </div>
 
-☰
-
-</div>
-
 </header>
   <div id="menuBox" style="display:none; position:absolute; right:20px; top:70px; background:#0e2a47; padding:20px; border-radius:10px;">
 
@@ -377,7 +373,25 @@ box.style.display = "none";
 </script>
 </script>
 
+<script>
 
+function toggleMenu(){
+
+var box = document.getElementById("menuBox");
+
+if(box.style.display === "block"){
+
+box.style.display = "none";
+
+}else{
+
+box.style.display = "block";
+
+}
+
+}
+
+</script>
 </body>
 
 
