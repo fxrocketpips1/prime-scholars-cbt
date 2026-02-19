@@ -247,27 +247,16 @@ Prime Scholars Academy
 
 <script type="module">
 
-
 import { initializeApp }
-
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
-
 import {
-
 getAuth,
-
 signInWithEmailAndPassword,
-
 createUserWithEmailAndPassword,
-
 sendPasswordResetEmail
-
 }
-from
-
-"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 
 const firebaseConfig = {
@@ -286,46 +275,45 @@ appId: "1:525160376952:web:3ca5c69044ff867fa7db8d"
 
 };
 
-
 const app = initializeApp(firebaseConfig);
-
 
 const auth = getAuth(app);
 
 
-
 window.login = function(){
 
-
 signInWithEmailAndPassword(
-
-
 auth,
-
 email.value,
-
 password.value
-
 )
 
-
 .then(()=>{
-
-
 window.location.href="dashboard.html"
-
-
 })
 
-
 .catch(e=>alert(e.message));
-
 
 }
 
 
 
 window.signup = function(){
+
+createUserWithEmailAndPassword(
+auth,
+email.value,
+password.value
+)
+
+.then(()=>alert("Account created successfully"))
+
+.catch(e=>alert(e.message));
+
+}
+
+
+
 window.forgotPassword = function(){
 
 if(!email.value){
@@ -344,31 +332,28 @@ sendPasswordResetEmail(auth, email.value)
 
 }
 
-createUserWithEmailAndPassword(
+</script>
 
-
-auth,
-
-email.value,
-
-password.value
-
-)
-
-
-.then(()=>alert("Account created successfully"))
-
-
-.catch(e=>alert(e.message));
-
-
-}
 
 
 <script>
 
 function toggleMenu(){
-  <script>
+
+var box = document.getElementById("menuBox");
+
+if(box.style.display === "block"){
+
+box.style.display = "none";
+
+}else{
+
+box.style.display = "block";
+
+}
+
+}
+
 
 function takeExam(){
 
